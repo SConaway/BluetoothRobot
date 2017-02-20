@@ -142,15 +142,7 @@ public class RobotControl extends ActionBarActivity {
     private void Right() {
         if (btSocket != null) {
             try {
-
-                //while (btnRight.isPressed()) {
-
-
                     btSocket.getOutputStream().write("r".getBytes());
-                //}
-               // if (!btnRight.isPressed()){
-               //     Stop();
-          //  }
             } catch (IOException e) {
                 msg("Error");
             }
