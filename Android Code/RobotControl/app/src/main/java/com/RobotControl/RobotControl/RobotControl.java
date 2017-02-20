@@ -21,7 +21,7 @@ public class RobotControl extends ActionBarActivity {
 
     //SPP UUID. Look for it
     static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    Button btnFor, btnStop, btnRev, btnRight, btnLeft, btnLED, btnOBJA, btnDis;
+    Button btnFor, btnStop, btnRev, btnRight, btnLeft, btnLED, btnDis;
     String address = null;
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
@@ -45,7 +45,6 @@ public class RobotControl extends ActionBarActivity {
         btnRight = (Button) findViewById(R.id.right_button);
         btnLeft = (Button) findViewById(R.id.left_button);
         btnLED = (Button) findViewById(R.id.led_button);
-        btnOBJA = (Button) findViewById(R.id.obja_button);
         btnDis = (Button) findViewById(R.id.disconnect_button);
 
         new ConnectBT().execute(); //Call the class to connect
@@ -84,10 +83,6 @@ public class RobotControl extends ActionBarActivity {
                 LED();   //method to turn LED ON/OFF
             }
         });
-
-        btnOBJA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {  OBJA();   } }); //method to enter object avoidance mode
 
         btnDis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,16 +166,6 @@ public class RobotControl extends ActionBarActivity {
         if (btSocket != null) {
             try {
                 btSocket.getOutputStream().write("A".getBytes());
-            } catch (IOException e) {
-                msg("Error");
-            }
-        }
-    }
-
-    private void OBJA() {
-        if (btSocket != null) {
-            try {
-                btSocket.getOutputStream().write("o".getBytes());
             } catch (IOException e) {
                 msg("Error");
             }

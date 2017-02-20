@@ -99,13 +99,5 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Object Avoidance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/obja_button"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true" />
-
 
 </RelativeLayout>
