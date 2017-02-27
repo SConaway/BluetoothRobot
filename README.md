@@ -4,11 +4,13 @@ An Arduino-based Bluetooth Robot
 Versions
 ===
 
-Obstacle Avoiding Robot - github.com/SConaway/RobotControl/
+Bluetooth Robot - https://github.com/SConaway/BluetoothRobot/
 
-IR Robot - github.com/SConaway/IRRobot
+Obstacle Avoiding Robot - https://github.com/SConaway/ObstacleAvoidingRobot/
 
-Line Tracking Robot - github.com/SConaway/LTMRobot
+IR Robot - https://github.com/SConaway/IRRobot/
+
+Line Tracking Robot - https://github.com/SConaway/LTMRobot/
 
 Based on:
 ===
